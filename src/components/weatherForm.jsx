@@ -1,17 +1,18 @@
 import React from "react";
+import "../styles/App.css";
 
 function WeatherForm({ city, onCityChange, onSubmit, loading }) {
   return (
-    <form onSubmit={onSubmit} style={{ marginBottom: "1rem" }}>
+    <form onSubmit={onSubmit} className="weather-form">
       <input
         type="text"
         placeholder="Enter city name"
         value={city}
         onChange={(e) => onCityChange(e.target.value)}
         required
-        style={{ padding: "0.5rem", width: "60%" }}
-      /> <br /> <br />
-      <button type="submit" disabled={loading} style={{ padding: "0.5rem" }}>
+        className="city-input"
+      />
+      <button type="submit" disabled={loading} className="btn">
         {loading ? "Loading..." : "Get Weather"}
       </button>
     </form>

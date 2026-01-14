@@ -1,8 +1,110 @@
 .App {
-    width: 700px;
-  color: black;
-  background: #ffffff;
+  max-width: 1500px;
+  /* margin: 1rem auto; */
+  background: linear-gradient(180deg,#0f1724 0%, #0b1320 100%);
+  color: #e6eef8;
   border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1.75rem;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.6);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* .app-header {
+  /* text-align: left; */
+  /* margin-bottom: 1rem; */
+ */
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.9rem;
+  color: #f1f5f9;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0;
+  color: #9fb3d6;
+  font-size: 0.95rem;
+}
+
+.app-main {
+  margin-top: 1rem;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0.75rem;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.nav-left { display:flex; align-items:center; gap:0.6rem; }
+.logo { width:36px; height:36px; display:block; }
+.brand { color:#e6eef8; font-weight:600; font-size:1.05rem; }
+
+.nav-right { display:flex; gap:0.75rem; }
+.nav-link { color:#9fb3d6; text-decoration:none; font-size:0.95rem; }
+.nav-link:hover { color:#cfe7ff; }
+.nav-link.active { color:#f8fafc; font-weight:600; }
+
+.weather-form {
+  /* make the form responsive so it doesn't force layout changes on page switch */
+  height: auto;
+  /* width: 100%; */
+  /* max-width: 100%; */
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.city-input {
+  flex: 1 1 60%;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.02);
+  color: #e6eef8;
+  outline: none;
+}
+
+.city-input::placeholder {
+  color: #9fb3d6;
+}
+
+.btn {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg,#2b6cb0,#0ea5a7);
+  color: white;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.page-container { min-height: 620px; }
+
+.page-inner {
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+.help-page, .settings-page { padding: 0.6rem; }
+
+.error-message {
+  color: #ff6b6b;
+  margin-top: 0.5rem;
+}
+
+.loader {
+  color: #cbd5e1;
 }
